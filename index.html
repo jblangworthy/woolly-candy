@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>woolly-candy</title>
+    <link rel="stylesheet" href="/src/renderer/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="header">
+        <div id="drag-handle"></div>
+        <div id="language-bar">
+          <select id="source-lang"></select>
+          <button id="swap-btn" title="Swap languages">⇄</button>
+          <select id="target-lang"></select>
+        </div>
+        <div id="header-actions">
+          <button id="settings-btn" title="Manage languages">⚙</button>
+          <button id="expand-btn" title="Toggle side-by-side">⬒</button>
+          <button id="close-btn" title="Close">✕</button>
+        </div>
+      </div>
+
+      <div id="compact-view">
+        <div id="translation-output"></div>
+        <div id="detected-badge"></div>
+      </div>
+
+      <div id="expanded-view" class="hidden">
+        <div id="source-panel">
+          <textarea id="source-text" placeholder="Source text..."></textarea>
+        </div>
+        <div id="target-panel">
+          <div id="expanded-translation"></div>
+        </div>
+      </div>
+
+      <div id="settings-view" class="hidden">
+        <div id="settings-header">
+          <span>Enabled Languages</span>
+          <span id="lang-count"></span>
+        </div>
+        <div id="language-list"></div>
+        <div id="settings-footer">
+          <button id="settings-done">Done</button>
+        </div>
+      </div>
+
+      <div id="action-bar">
+        <button id="replace-btn" title="Replace selected text with translation">Replace</button>
+        <button id="copy-btn" title="Copy translation to clipboard">Copy</button>
+      </div>
+
+      <div id="error-display" class="hidden"></div>
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+      </div>
+      <div id="status-dot" title="Disconnected"></div>
+    </div>
+    <script type="module" src="/src/renderer.ts"></script>
+  </body>
+</html>

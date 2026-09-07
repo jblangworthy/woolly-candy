@@ -1,0 +1,17 @@
+export const IPC = {
+  TRANSLATE: 'translate',
+  SWAP_LANGUAGES: 'swap-languages',
+  SET_LANGUAGE_PAIR: 'set-language-pair',
+  GET_LANGUAGES: 'get-languages',
+  GET_PREFERENCES: 'get-preferences',
+  SET_ENABLED_LANGUAGES: 'set-enabled-languages',
+  DISMISS_WINDOW: 'window:dismiss',
+  SET_EXPANDED: 'window:set-expanded',
+  SOURCE_TEXT: 'source-text:set',
+  TRANSLATION_RESULT: 'translation:result',
+  TRANSLATION_ERROR: 'translation:error',
+  LANGUAGES_LOADED: 'languages:loaded',
+  CONNECTION_STATUS: 'connection:status',
+  COPY_TRANSLATION: 'copy-translation',
+  REPLACE_ORIGINAL: 'replace-original',
+} as const;
