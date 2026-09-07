@@ -40,6 +40,9 @@ function ensurePopup(): BrowserWindow {
     },
   });
 
+  popup.setAlwaysOnTop(true, 'screen-saver');
+  popup.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+
   ready = false;
   readyPromise = new Promise<void>((resolve) => { readyResolve = resolve; });
 
